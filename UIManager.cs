@@ -56,7 +56,7 @@ internal static class UIManager
 
     public static void PressKeyToContinue()
     {
-        Console.Write("\nPressione qualquer tecla para continuar... ");
+        Console.Write("\n\nPressione qualquer tecla para continuar... ");
 
         Console.ReadKey();
     }

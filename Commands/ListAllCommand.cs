@@ -16,12 +16,16 @@ internal class ListAllCommand : IOptionCommand
 
     public void Execute()
     {
-        var contas = _context.Contas.AsQueryable().AsNoTracking().ToList();
+        var contas = string.Join(
+            "\n-----------------------------------\n",
+            _context
+                .Contas
+                .AsQueryable()
+                .AsNoTracking()
+                .ToList()
+                .Select(c => c.ToString()));
 
-        foreach (var conta in contas)
-        {
-            Console.WriteLine(conta);
-        }
+        Console.WriteLine(contas);
 
         UIManager.PressKeyToContinue();
     }

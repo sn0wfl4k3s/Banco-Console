@@ -23,11 +23,9 @@ internal class Conta
     {
         var sb = new StringBuilder();
 
-        sb.Append("---------------------------------------------\n");
         sb.Append($"Conta..: {Numero}\n");
         sb.Append($"Titular: {Titular}\n");
         sb.Append($"Saldo..: R$ {Saldo:0.00}\n");
-        sb.Append("---------------------------------------------\n");
 
         return sb.ToString();
     }
